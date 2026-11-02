@@ -3,6 +3,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
+const backendProxyTarget = 'http://127.0.0.1:5000'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -37,11 +39,11 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: backendProxyTarget,
         changeOrigin: true,
       },
       '/socket.io': {
-        target: 'http://localhost:5000',
+        target: backendProxyTarget,
         ws: true,
         changeOrigin: true,
       },
