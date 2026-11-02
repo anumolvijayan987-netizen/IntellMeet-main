@@ -40,6 +40,14 @@ describe('IntellMeet Responsive Viewport Audit', () => {
 
       expect(screen.getByText(/make every meeting matter/i)).toBeInTheDocument()
       expect(screen.getAllByRole('button', { name: /get started/i }).length).toBeGreaterThanOrEqual(1)
+      expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute('href', '/login')
+
+      const billingToggle = screen.getByRole('button', { name: 'Annual billing' })
+      expect(billingToggle).toHaveAttribute('aria-pressed', 'true')
+      fireEvent.click(billingToggle)
+      expect(screen.getByText('$19')).toBeInTheDocument()
+
+      expect(screen.queryByRole('link', { name: /privacy policy/i })).not.toBeInTheDocument()
     })
   })
 

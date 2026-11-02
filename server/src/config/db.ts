@@ -36,7 +36,7 @@ class DatabaseConnection {
     })
 
     mongoose.connection.on('error', (err) => {
-      logger.error('🍃 MongoDB connection error:', { message: err.message })
+      logger.error('🍃 MongoDB connection error', { errorType: err.name })
     })
 
     mongoose.connection.on('disconnected', () => {
@@ -49,7 +49,7 @@ class DatabaseConnection {
 
   public async connect(): Promise<void> {
     this.status = 'connecting'
-    logger.info(`🍃 Connecting to MongoDB at ${this.maskUri(env.MONGO_URI)}...`)
+    logger.info('🍃 Connecting to MongoDB...')
 
     if (process.platform === 'win32' && env.MONGO_URI.startsWith('mongodb+srv://')) {
       try {
@@ -66,9 +66,9 @@ class DatabaseConnection {
       this.retryCount = 0
     } catch (err: unknown) {
       const error = err as Error
-      logger.warn(
-        `🍃 MongoDB direct connection failed: ${error.message}. Activating resilient fallback mode.`
-      )
+      logger.warn('🍃 MongoDB connection failed. Activating resilient fallback mode.', {
+        errorType: error.name,
+      })
       this.status = 'fallback_in_memory'
       logger.info(
         '💾 [Resilient Store] In-memory database buffer active. Server operations proceeding smoothly.'

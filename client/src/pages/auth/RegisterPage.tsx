@@ -44,7 +44,7 @@ export const RegisterPage: React.FC = () => {
         name,
         email,
         password,
-        organizationName: company,
+        company,
         role: 'org_admin',
       })
       setUser({

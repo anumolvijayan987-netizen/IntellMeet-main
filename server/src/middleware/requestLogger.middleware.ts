@@ -11,7 +11,7 @@ export const requestLogger = (
   res.on('finish', () => {
     const duration = Date.now() - start
     const status = res.statusCode
-    const logMsg = `${req.method} ${req.originalUrl} ${status} - ${duration}ms`
+    const logMsg = `${req.method} ${req.path} ${status} - ${duration}ms`
 
     if (status >= 400) {
       logger.warn(logMsg)

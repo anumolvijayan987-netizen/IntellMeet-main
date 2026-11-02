@@ -32,7 +32,7 @@ export const authService = {
     email: string
     password: string
     role?: string
-    organizationName?: string
+    company?: string
   }): Promise<AuthResponse> {
     const res = await apiRequest<AuthResponse>('/auth/register', {
       method: 'POST',

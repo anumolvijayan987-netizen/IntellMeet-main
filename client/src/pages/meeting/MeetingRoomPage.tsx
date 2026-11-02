@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import {
   Mic,
   MicOff,
@@ -155,7 +155,7 @@ export const MeetingRoomPage: React.FC = () => {
   const { roomId = 'sprint-room' } = useParams<{ roomId: string }>()
   const navigate = useNavigate()
   const { socket, isConnected } = useSocket()
-  const { user, setUserName, isAuthenticated } = useAuthStore()
+  const { user, setUserName } = useAuthStore()
   const { success, info, error: toastError } = useToast()
 
   // Store state
@@ -357,7 +357,7 @@ export const MeetingRoomPage: React.FC = () => {
   // Send Chat message
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!messageInput.trim() || !socket) return
+    if (!messageInput.trim() || !socket || !isConnected) return
 
     const text = messageInput.trim()
 
@@ -375,11 +375,15 @@ export const MeetingRoomPage: React.FC = () => {
   }
 
   // Copy meeting invite link
-  const handleCopyInvite = () => {
-    navigator.clipboard.writeText(window.location.href)
-    setCopiedLink(true)
-    info('Meeting invitation link copied to clipboard')
-    setTimeout(() => setCopiedLink(false), 2000)
+  const handleCopyInvite = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setCopiedLink(true)
+      info('Meeting invitation link copied to clipboard')
+      setTimeout(() => setCopiedLink(false), 2000)
+    } catch {
+      toastError('Could not copy the meeting invitation link')
+    }
   }
 
   // Autonomous AI Summarization Trigger
@@ -478,10 +482,15 @@ export const MeetingRoomPage: React.FC = () => {
   return (
     <div className="h-screen w-screen bg-[#0B0F19] text-white flex flex-col overflow-hidden select-none font-sans">
       {/* 1. Header Control Bar */}
-      <header className="h-14 px-4 border-b border-white/10 flex items-center justify-between shrink-0 bg-[#0B0F19]/90 backdrop-blur-md z-20">
+      <header className="min-h-14 h-auto sm:h-14 px-3 sm:px-4 py-2 sm:py-0 border-b border-white/10 flex flex-wrap items-center justify-between gap-y-2 shrink-0 bg-[#0B0F19]/90 backdrop-blur-md z-20">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#12B76A] animate-pulse" />
+            <span
+              className={`w-2.5 h-2.5 rounded-full ${isConnected ? 'bg-[#12B76A] animate-pulse' : 'bg-[#F79009]'}`}
+              role="img"
+              aria-label={isConnected ? 'Connected to meeting server' : 'Not connected to meeting server'}
+              title={isConnected ? 'Connected to meeting server' : 'Not connected to meeting server'}
+            />
             <h1 className="font-heading text-sm font-semibold text-white tracking-wide">
               {roomId}
             </h1>
@@ -509,7 +518,7 @@ export const MeetingRoomPage: React.FC = () => {
         </div>
 
         {/* Right Header Actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center justify-end gap-2 min-w-0">
           {/* Participant Identity badge with instant Name Editor */}
           <button
             type="button"
@@ -524,18 +533,6 @@ export const MeetingRoomPage: React.FC = () => {
             <span className="font-medium max-w-[120px] truncate">{user.name}</span>
             <span className="text-[10px] text-slate-400 font-mono">(Edit)</span>
           </button>
-
-          {!isAuthenticated && (
-            <Link to="/login">
-              <Button
-                variant="outline"
-                size="sm"
-                className="text-xs bg-[#2563EB]/20 border-[#2563EB]/40 text-[#60A5FA] hover:bg-[#2563EB]/30"
-              >
-                Sign in
-              </Button>
-            </Link>
-          )}
 
           <Button
             variant="outline"
@@ -571,9 +568,9 @@ export const MeetingRoomPage: React.FC = () => {
       </header>
 
       {/* 2. Main Stage & Video Viewport */}
-      <div className="flex-1 flex overflow-hidden relative">
+      <div className="flex-1 min-h-0 flex flex-col md:flex-row overflow-hidden relative">
         {/* Left Video Grid Area */}
-        <div className="flex-1 flex flex-col p-3 sm:p-4 gap-3 overflow-hidden relative">
+        <div className="flex-1 min-h-0 flex flex-col p-3 sm:p-4 gap-3 overflow-hidden relative">
           {/* Permission or device warning */}
           {deviceError && (
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 bg-amber-500/20 border border-amber-500/40 text-amber-200 px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow-xl backdrop-blur-md">
@@ -785,7 +782,7 @@ export const MeetingRoomPage: React.FC = () => {
         </div>
 
         {/* Right Side Drawer: Chat / AI Minutes / Participants */}
-        <aside className="w-80 sm:w-96 border-l border-white/10 bg-[#0E131F] flex flex-col shrink-0 z-20">
+        <aside className="w-full h-56 sm:h-64 md:h-auto md:w-80 lg:w-96 border-t md:border-t-0 md:border-l border-white/10 bg-[#0E131F] flex flex-col shrink-0 z-20">
           {/* Tab Selection */}
           <div className="flex border-b border-white/10 p-2 gap-1 bg-[#0B0F19]/60">
             <button
@@ -870,12 +867,13 @@ export const MeetingRoomPage: React.FC = () => {
               <form onSubmit={handleSendMessage} className="p-3 border-t border-white/10 flex gap-2 bg-[#0B0F19]/50">
                 <input
                   type="text"
-                  placeholder="Send a real-time message..."
+                  placeholder={isConnected ? 'Send a real-time message...' : 'Waiting for connection...'}
                   value={messageInput}
                   onChange={(e) => setMessageInput(e.target.value)}
-                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB]"
+                  disabled={!isConnected}
+                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#2563EB] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <Button type="submit" variant="primary" size="sm" icon={<Send className="w-3.5 h-3.5" />}>
+                <Button type="submit" variant="primary" size="sm" disabled={!isConnected || !messageInput.trim()} icon={<Send className="w-3.5 h-3.5" />}>
                   Send
                 </Button>
               </form>
@@ -1012,12 +1010,14 @@ export const MeetingRoomPage: React.FC = () => {
       </div>
 
       {/* 3. Bottom Control Bar */}
-      <footer className="h-18 px-4 border-t border-white/10 bg-[#0B0F19] flex items-center justify-between shrink-0 z-30">
+      <footer className="min-h-[4.5rem] h-auto sm:h-[4.5rem] px-3 sm:px-4 py-2 sm:py-0 border-t border-white/10 bg-[#0B0F19] flex flex-wrap items-center justify-between gap-2 shrink-0 z-30">
         <div className="flex items-center gap-2">
           {/* Microphone toggle */}
           <button
             type="button"
             onClick={toggleMic}
+            aria-label={isMicOn ? 'Mute microphone' : 'Unmute microphone'}
+            title={isMicOn ? 'Mute microphone' : 'Unmute microphone'}
             className={`p-3 rounded-2xl flex items-center justify-center transition-all ${
               isMicOn
                 ? 'bg-white/10 text-white hover:bg-white/15'
@@ -1031,6 +1031,8 @@ export const MeetingRoomPage: React.FC = () => {
           <button
             type="button"
             onClick={toggleCam}
+            aria-label={isCamOn ? 'Turn camera off' : 'Turn camera on'}
+            title={isCamOn ? 'Turn camera off' : 'Turn camera on'}
             className={`p-3 rounded-2xl flex items-center justify-center transition-all ${
               isCamOn
                 ? 'bg-white/10 text-white hover:bg-white/15'
@@ -1044,6 +1046,8 @@ export const MeetingRoomPage: React.FC = () => {
           <button
             type="button"
             onClick={toggleScreenShare}
+            aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
+            title={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
             className={`p-3 rounded-2xl flex items-center justify-center transition-all ${
               isScreenSharing
                 ? 'bg-[#2563EB] text-white hover:bg-[#1D4ED8]'
@@ -1057,6 +1061,8 @@ export const MeetingRoomPage: React.FC = () => {
           <button
             type="button"
             onClick={handleToggleRecording}
+            aria-label={isRecording ? 'Stop recording' : 'Start recording'}
+            title={isRecording ? 'Stop recording' : 'Start recording'}
             className={`p-3 rounded-2xl flex items-center justify-center transition-all ${
               isRecording
                 ? 'bg-[#F04438] text-white animate-pulse'
@@ -1072,6 +1078,7 @@ export const MeetingRoomPage: React.FC = () => {
           <button
             type="button"
             onClick={toggleTranscribing}
+            aria-pressed={isTranscribing}
             className={`px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border transition-all ${
               isTranscribing
                 ? 'bg-[#12B76A]/20 text-[#12B76A] border-[#12B76A]/40'

@@ -102,8 +102,8 @@ export class AuthService {
         })
         await member.save()
       } catch (err: unknown) {
-        logger.warn('Failed to write to MongoDB, utilizing in-memory store:', {
-          error: (err as Error).message,
+        logger.warn('Failed to write to MongoDB; utilizing in-memory store.', {
+          errorType: err instanceof Error ? err.name : 'UnknownError',
         })
       }
     }

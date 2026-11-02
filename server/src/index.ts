@@ -76,7 +76,9 @@ export const startServer = async (): Promise<http.Server> => {
   try {
     await db.connect()
   } catch (err: any) {
-    logger.error('Database connection failed during startup:', { error: err?.message })
+    logger.error('Database connection failed during startup.', {
+      errorType: err instanceof Error ? err.name : 'UnknownError',
+    })
   }
 
   // Graceful shutdown
@@ -102,7 +104,9 @@ const isDirectExecution =
 
 if (isDirectExecution) {
   startServer().catch((err) => {
-    logger.error('Fatal error during server startup:', { error: err.message })
+    logger.error('Fatal error during server startup.', {
+      errorType: err instanceof Error ? err.name : 'UnknownError',
+    })
     process.exit(1)
   })
 }

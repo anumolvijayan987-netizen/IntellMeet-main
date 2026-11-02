@@ -72,7 +72,7 @@ async function runTestSuite() {
           email: testUserEmail,
           password: testPassword,
           role: 'org_admin',
-          organizationName: 'IntellMeet Enterprise Labs',
+          company: 'IntellMeet Enterprise Labs',
         }),
       })
       if (!res.ok) {

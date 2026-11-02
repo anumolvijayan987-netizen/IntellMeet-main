@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {
   Video,
   Sparkles,
@@ -26,7 +26,6 @@ import { Badge } from '../components/ui/Badge'
 import { Card } from '../components/ui/Card'
 
 export const LandingPage: React.FC = () => {
-  const navigate = useNavigate()
   const [activeShowcaseTab, setActiveShowcaseTab] = useState<'video' | 'ai' | 'transcript' | 'tasks'>('video')
   const [annualBilling, setAnnualBilling] = useState(true)
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -58,7 +57,7 @@ export const LandingPage: React.FC = () => {
     <div className="min-h-screen bg-[#F8FAFC] text-[#101828] font-sans overflow-x-hidden">
       {/* 1. Public Navigation */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#EAECF0] transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[4.5rem] flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-[#2563EB] flex items-center justify-center text-white shadow-subtle">
@@ -662,6 +661,9 @@ export const LandingPage: React.FC = () => {
                 Monthly billing
               </span>
               <button
+                type="button"
+                aria-label="Annual billing"
+                aria-pressed={annualBilling}
                 onClick={() => setAnnualBilling(!annualBilling)}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   annualBilling ? 'bg-[#2563EB]' : 'bg-[#D0D5DD]'
@@ -910,10 +912,10 @@ export const LandingPage: React.FC = () => {
             <div className="space-y-2">
               <div className="font-semibold text-white">Company</div>
               <ul className="space-y-1.5">
-                <li><a href="#" className="hover:text-white">About Us</a></li>
-                <li><a href="#" className="hover:text-white">Careers</a></li>
-                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white">Terms of Service</a></li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
               </ul>
             </div>
           </div>
@@ -921,10 +923,10 @@ export const LandingPage: React.FC = () => {
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
             <span>© 2026 IntellMeet Inc. All rights reserved.</span>
             <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-white">Security</a>
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Cookies</a>
-              <a href="#" className="hover:text-white">Status</a>
+              <a href="#security" className="hover:text-white">Security</a>
+              <span>Privacy</span>
+              <span>Cookies</span>
+              <span>Status</span>
             </div>
           </div>
         </div>
