@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: intellmeet-backend:latest
+    container_name: intellmeet-server
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongo:27017/intellimeet
+      - JWT_SECRET=${JWT_SECRET:-intellmeet_access_jwt_secret_key_12345}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET:-intellmeet_refresh_jwt_secret_key_67890}
+      - CLIENT_URL=${CLIENT_URL:-http://localhost:5173,https://intellmeet.vercel.app}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AI_PROVIDER=${AI_PROVIDER:-builtin}
+      - STORAGE_ENDPOINT=${STORAGE_ENDPOINT}
+      - STORAGE_BUCKET=${STORAGE_BUCKET:-intellmeet-recordings}
+      - STORAGE_ACCESS_KEY=${STORAGE_ACCESS_KEY}
+      - STORAGE_SECRET_KEY=${STORAGE_SECRET_KEY}
+      - VIDEO_PROVIDER_API_KEY=${VIDEO_PROVIDER_API_KEY:-devkey_intellmeet}
+      - VIDEO_PROVIDER_API_SECRET=${VIDEO_PROVIDER_API_SECRET:-secret_intellmeet_key_abcdef123456}
+      - TURN_SERVER_URL=${TURN_SERVER_URL}
+      - TURN_USERNAME=${TURN_USERNAME}
+      - TURN_CREDENTIAL=${TURN_CREDENTIAL}
+    depends_on:
+      mongo:
+        condition: service_healthy
+    volumes:
+      - intellmeet_recordings:/app/uploads/recordings
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  mongo:
+    image: mongo:7.0-jammy
+    container_name: intellmeet-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - intellmeet_db_data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  intellmeet_db_data:
+    driver: local
+  intellmeet_recordings:
+    driver: local

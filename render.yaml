@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: intellmeet-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build:shared && npm run build:server
+    startCommand: npm run start:server
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: AI_PROVIDER
+        value: builtin
