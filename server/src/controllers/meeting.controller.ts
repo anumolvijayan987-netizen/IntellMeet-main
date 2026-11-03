@@ -4,6 +4,22 @@ import { SfuService } from '../services/sfu.service'
 import { ApiResponse } from '../utils/apiResponse'
 import { AppError } from '../utils/appError'
 
+const getDisplayName = (req: Request, fallback = 'Anonymous'): string => {
+  if (req.user?.email) {
+    return req.user.email.split('@')[0]
+  }
+
+  if (req.body?.hostName) {
+    return String(req.body.hostName)
+  }
+
+  if (req.query?.name) {
+    return String(req.query.name)
+  }
+
+  return fallback
+}
+
 export const getMeetings = async (req: Request, res: Response): Promise<void> => {
   const limit = req.query.limit ? parseInt(req.query.limit as string, 10) : 20
   const meetings = await MeetingService.getRecentMeetings(limit)
@@ -28,7 +44,7 @@ export const saveMeeting = async (req: Request, res: Response): Promise<void> =>
 
 export const createMeeting = async (req: Request, res: Response): Promise<void> => {
   const userId = req.user?.userId || 'usr_host'
-  const userName = req.user?.email.split('@')[0] || req.body.hostName || 'Lead Host'
+  const userName = getDisplayName(req, 'Lead Host')
   const { title, isPrivate, passcode, workspaceId } = req.body
 
   const meeting = await MeetingService.createMeeting({
@@ -56,7 +72,7 @@ export const createMeeting = async (req: Request, res: Response): Promise<void> 
 
 export const scheduleMeeting = async (req: Request, res: Response): Promise<void> => {
   const userId = req.user?.userId || 'usr_host'
-  const userName = req.user?.email.split('@')[0] || req.body.hostName || 'Lead Host'
+  const userName = getDisplayName(req, 'Lead Host')
 
   const scheduled = await MeetingService.scheduleMeeting({
     ...req.body,
@@ -132,7 +148,7 @@ export const validateMeetingAccess = async (req: Request, res: Response): Promis
 export const getSfuToken = async (req: Request, res: Response): Promise<void> => {
   const roomId = String(req.params.roomId)
   const identity = req.user?.userId || (req.query.identity as string) || `user_${Date.now()}`
-  const name = req.user?.email.split('@')[0] || (req.query.name as string) || 'Attendee'
+  const name = req.user?.email ? req.user.email.split('@')[0] : (req.query.name as string) || 'Attendee'
   const isHost = req.user?.role === 'super_admin' || req.user?.role === 'org_admin' || req.user?.role === 'meeting_host'
 
   const credentials = await SfuService.generateToken({

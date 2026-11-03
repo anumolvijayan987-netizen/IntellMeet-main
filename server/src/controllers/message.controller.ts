@@ -25,12 +25,13 @@ export const getMessages = async (req: Request, res: Response): Promise<void> =>
 
 export const sendMessage = async (req: Request, res: Response): Promise<void> => {
   const data = req.body
+  const senderName = req.user?.email ? req.user.email.split('@')[0] : data.senderName || 'Anonymous'
 
   if (db.isConnected()) {
     const msg = await Message.create({
       ...data,
       senderId: req.user?.userId,
-      senderName: req.user?.email.split('@')[0] || data.senderName || 'Anonymous',
+      senderName: senderName,
     })
     ApiResponse.created(res, msg, 'Message recorded.')
     return

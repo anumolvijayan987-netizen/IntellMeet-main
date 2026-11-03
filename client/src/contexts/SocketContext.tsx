@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useRef, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { io, Socket } from 'socket.io-client'
 import { SOCKET_URL } from '../utils/constants'
 
@@ -14,32 +14,34 @@ export const SocketContext = createContext<SocketContextValue>({
 
 export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false)
-  const socketRef = useRef<Socket | null>(null)
+  const [socket, setSocket] = useState<Socket | null>(null)
 
   useEffect(() => {
-    const socket = io(SOCKET_URL, {
+    const socketInstance = io(SOCKET_URL, {
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
     })
 
-    socketRef.current = socket
+    setSocket(socketInstance)
 
-    socket.on('connect', () => {
+    socketInstance.on('connect', () => {
       setIsConnected(true)
     })
 
-    socket.on('disconnect', () => {
+    socketInstance.on('disconnect', () => {
       setIsConnected(false)
     })
 
     return () => {
-      socket.disconnect()
+      socketInstance.disconnect()
+      setSocket(null)
+      setIsConnected(false)
     }
   }, [])
 
   return (
-    <SocketContext.Provider value={{ socket: socketRef.current, isConnected }}>
+    <SocketContext.Provider value={{ socket, isConnected }}>
       {children}
     </SocketContext.Provider>
   )

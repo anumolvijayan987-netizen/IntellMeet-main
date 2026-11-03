@@ -117,6 +117,28 @@ export const useSpeechRecognition = (roomId: string) => {
   }, [setLiveSubtitle])
 
   useEffect(() => {
+    if (!socket) return
+
+    const handleReceiveTranscript = (payload: { speaker?: string; text?: string; timestamp?: string }) => {
+      const transcriptText = payload.text?.trim()
+      if (!transcriptText) return
+
+      const speakerName = payload.speaker || 'Participant'
+      setLiveSubtitle(transcriptText, speakerName)
+      addTranscript({
+        speaker: speakerName,
+        text: transcriptText,
+        timestamp: payload.timestamp || new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      })
+    }
+
+    socket.on('receive-transcript', handleReceiveTranscript)
+    return () => {
+      socket.off('receive-transcript', handleReceiveTranscript)
+    }
+  }, [socket, addTranscript, setLiveSubtitle])
+
+  useEffect(() => {
     if (isTranscribing && isMicOn && roomId) {
       startRecognition()
     } else {

@@ -655,110 +655,94 @@ export const useWebRTC = (options: Partial<UseWebRTCOptions> = {}) => {
   }, [socket, roomId, createPeerConnection])
 
   // 3. Screen Sharing Management
+  const getVideoSender = (pc: RTCPeerConnection) =>
+    pc.getSenders().find((sender) => sender.track?.kind === 'video') ||
+    pc.getTransceivers().find((transceiver) => transceiver.receiver.track.kind === 'video')?.sender
+
+  const stopScreenShare = (streamToStop = screenStream) => {
+    streamToStop?.getTracks().forEach((track) => {
+      track.onended = null
+      if (track.readyState !== 'ended') track.stop()
+    })
+    setScreenStream(null)
+    setScreenSharing(false)
+
+    const cameraTrack = localStream?.getVideoTracks()[0] || null
+    peerConnectionsRef.current.forEach((pc) => {
+      const sender = getVideoSender(pc)
+      if (sender) {
+        void sender.replaceTrack(cameraTrack).catch((err) => {
+          console.warn('Could not restore camera track:', err instanceof Error ? err.name : 'UnknownError')
+        })
+      }
+    })
+
+    socket?.emit('media-state-change', {
+      roomId,
+      audioEnabled: isMicOn,
+      videoEnabled: isCamOn,
+      screenSharing: false,
+    })
+  }
+
   const toggleScreenShare = async () => {
     if (isScreenSharing) {
-      if (screenStream) {
-        screenStream.getTracks().forEach((track) => track.stop())
-        setScreenStream(null)
+      stopScreenShare()
+      return
+    }
+
+    if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getDisplayMedia) {
+      setDeviceError('Screen sharing is not supported in this browser or connection.')
+      return
+    }
+
+    let stream: MediaStream | null = null
+    try {
+      setDeviceError(null)
+      stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: false })
+      const screenTrack = stream.getVideoTracks()[0]
+      if (!screenTrack) {
+        stream.getTracks().forEach((track) => track.stop())
+        throw new Error('No display video track was returned')
       }
-      setScreenSharing(false)
 
-      // Restore camera track to all peers
-      if (localStream) {
-        const camTrack = localStream.getVideoTracks()[0]
-        if (camTrack) {
-          peerConnectionsRef.current.forEach((pc) => {
-            const sender = pc.getSenders().find((s) => s.track?.kind === 'video')
-            if (sender) sender.replaceTrack(camTrack)
-          })
-        }
+      screenTrack.onended = () => stopScreenShare(stream || undefined)
+      setScreenStream(stream)
+      setScreenSharing(true)
+
+      if (screenVideoRef.current) {
+        screenVideoRef.current.srcObject = stream
       }
 
-      if (socket) {
-        socket.emit('media-state-change', {
-          roomId,
-          audioEnabled: isMicOn,
-          videoEnabled: isCamOn,
-          screenSharing: false,
-        })
+      for (const [targetSocketId, pc] of peerConnectionsRef.current) {
+        let sender = getVideoSender(pc)
+        if (sender) {
+          await sender.replaceTrack(screenTrack)
+          continue
+        }
+
+        sender = pc.addTrack(screenTrack, stream)
+        const offer = await pc.createOffer()
+        await pc.setLocalDescription(offer)
+        socket?.emit('offer', { targetId: targetSocketId, offer: pc.localDescription })
       }
-    } else {
-      try {
-        let stream: MediaStream | null = null
 
-        if (typeof navigator !== 'undefined' && navigator.mediaDevices?.getDisplayMedia) {
-          try {
-            // Race with timeout so headless browser / dismissed dialogs never hang
-            const capturePromise = navigator.mediaDevices.getDisplayMedia({
-              video: true,
-              audio: true,
-            })
-            const timeoutPromise = new Promise<never>((_, reject) =>
-              setTimeout(() => reject(new Error('Display capture fallback')), 2000)
-            )
-            stream = await Promise.race([capturePromise, timeoutPromise])
-          } catch (displayErr: any) {
-            console.warn('Real display media unavailable, using presentation fallback stream.')
-          }
-        }
+      socket?.emit('media-state-change', {
+        roomId,
+        audioEnabled: isMicOn,
+        videoEnabled: isCamOn,
+        screenSharing: true,
+      })
 
-        if (!stream) {
-          // Robust presentation canvas stream fallback
-          const canvas = document.createElement('canvas')
-          canvas.width = 1280
-          canvas.height = 720
-          const ctx = canvas.getContext('2d')
-          if (ctx) {
-            ctx.fillStyle = '#0F172A'
-            ctx.fillRect(0, 0, 1280, 720)
-            ctx.fillStyle = '#38BDF8'
-            ctx.font = 'bold 36px sans-serif'
-            ctx.fillText('IntellMeet Presentation Screen', 340, 360)
-            ctx.font = '20px sans-serif'
-            ctx.fillStyle = '#94A3B8'
-            ctx.fillText('Live collaborative screen broadcast active', 420, 410)
-          }
-          stream = (canvas as any).captureStream ? (canvas as any).captureStream(15) : new MediaStream()
-        }
-
-        if (!stream) {
-          throw new Error('Screen capture failed')
-        }
-
-        setScreenStream(stream)
-        setScreenSharing(true)
-
-        if (screenVideoRef.current) {
-          screenVideoRef.current.srcObject = stream
-        }
-
-        const screenTrack = stream.getVideoTracks()[0]
-
-        // Replace video track for all connected peers
-        peerConnectionsRef.current.forEach((pc) => {
-          const sender = pc.getSenders().find((s) => s.track?.kind === 'video')
-          if (sender && screenTrack) {
-            sender.replaceTrack(screenTrack)
-          }
-        })
-
-        if (socket) {
-          socket.emit('media-state-change', {
-            roomId,
-            audioEnabled: isMicOn,
-            videoEnabled: isCamOn,
-            screenSharing: true,
-          })
-        }
-
-        if (screenTrack) {
-          screenTrack.onended = () => {
-            toggleScreenShare()
-          }
-        }
-      } catch (err) {
-        console.warn('Screen share could not be started:', err)
-      }
+    } catch (err) {
+      if (stream) stopScreenShare(stream)
+      const errorName = err instanceof Error ? err.name : 'UnknownError'
+      console.warn('Screen share could not be started:', errorName)
+      setDeviceError(
+        errorName === 'NotAllowedError'
+          ? 'Screen sharing was canceled or permission was denied.'
+          : 'Screen sharing could not be started. Check browser permissions and try again.'
+      )
     }
   }
 

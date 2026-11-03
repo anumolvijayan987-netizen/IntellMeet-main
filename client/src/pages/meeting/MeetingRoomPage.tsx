@@ -49,10 +49,14 @@ const PeerVideoTile: React.FC<{
   canModerate?: boolean
 }> = ({ peer, isActiveSpeaker, onMute, onRemove, canModerate }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     if (videoRef.current && peer.stream) {
       videoRef.current.srcObject = peer.stream
+    }
+    if (audioRef.current && peer.stream) {
+      audioRef.current.srcObject = peer.stream
     }
   }, [peer.stream])
 
@@ -64,6 +68,7 @@ const PeerVideoTile: React.FC<{
           : 'border border-white/10'
       }`}
     >
+      <audio ref={audioRef} autoPlay playsInline />
       {peer.videoEnabled ? (
         <video
           ref={videoRef}
@@ -376,8 +381,32 @@ export const MeetingRoomPage: React.FC = () => {
 
   // Copy meeting invite link
   const handleCopyInvite = async () => {
+    const inviteLink = new URL(`/room/${encodeURIComponent(roomId)}`, window.location.origin).href
+
     try {
-      await navigator.clipboard.writeText(window.location.href)
+      let copied = false
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(inviteLink)
+          copied = true
+        } catch {
+          // Use the legacy copy method for browsers that reject clipboard permissions.
+        }
+      }
+
+      if (!copied) {
+        const input = document.createElement('textarea')
+        input.value = inviteLink
+        input.setAttribute('readonly', '')
+        input.style.position = 'fixed'
+        input.style.opacity = '0'
+        document.body.appendChild(input)
+        input.select()
+        copied = document.execCommand('copy')
+        input.remove()
+      }
+
+      if (!copied) throw new Error('Clipboard copy was not available')
       setCopiedLink(true)
       info('Meeting invitation link copied to clipboard')
       setTimeout(() => setCopiedLink(false), 2000)
