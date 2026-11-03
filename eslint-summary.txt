@@ -1,0 +1,2311 @@
+[
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/components/common/Sidebar.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 4,
+        "col": 3,
+        "msg": "'Video' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/components/ui/ConfirmDialog.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 2,
+        "col": 25,
+        "msg": "'AlertCircle' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/hooks/useSpeechRecognition.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 9,
+        "col": 25,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 10,
+        "col": 31,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 15,
+        "col": 33,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 47,
+        "col": 38,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/hooks/useWebRTC.ts",
+    "messages": [
+      {
+        "rule": "no-undef",
+        "line": 18,
+        "col": 20,
+        "msg": "'RTCPeerConnectionState' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 71,
+        "col": 32,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 140,
+        "col": 26,
+        "msg": "'MediaStreamConstraints' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 148,
+        "col": 28,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 190,
+        "col": 58,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 492,
+        "col": 43,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 509,
+        "col": 37,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 514,
+        "col": 53,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 530,
+        "col": 55,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 542,
+        "col": 64,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 554,
+        "col": 43,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 571,
+        "col": 49,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 603,
+        "col": 43,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 617,
+        "col": 56,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 786,
+        "col": 42,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/layouts/DashboardLayout.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 19,
+        "col": 3,
+        "msg": "'ChevronDown' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 23,
+        "col": 3,
+        "msg": "'Check' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 24,
+        "col": 3,
+        "msg": "'Clock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 25,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 26,
+        "col": 3,
+        "msg": "'ExternalLink' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 29,
+        "col": 10,
+        "msg": "'Badge' is defined but never used."
+      },
+      {
+        "rule": "no-empty",
+        "line": 95,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 107,
+        "col": 13,
+        "msg": "Empty block statement."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/HistoryPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 10,
+        "col": 3,
+        "msg": "'ArrowLeft' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 13,
+        "col": 3,
+        "msg": "'ExternalLink' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 29,
+        "col": 10,
+        "msg": "'MeetingRecord' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 32,
+        "col": 58,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 172,
+        "col": 43,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 200,
+        "col": 42,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 413,
+        "col": 61,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/HomePage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 11,
+        "col": 3,
+        "msg": "'ShieldCheck' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 13,
+        "col": 3,
+        "msg": "'Clock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 35,
+        "col": 36,
+        "msg": "'isLoadingHealth' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 195,
+        "col": 51,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/LandingPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 7,
+        "col": 3,
+        "msg": "'Users' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 14,
+        "col": 3,
+        "msg": "'Layers' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 15,
+        "col": 3,
+        "msg": "'Zap' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 19,
+        "col": 3,
+        "msg": "'Play' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 21,
+        "col": 3,
+        "msg": "'Building' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 22,
+        "col": 3,
+        "msg": "'Sparkle' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/MeetingPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 15,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 38,
+        "col": 19,
+        "msg": "'isConnected' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 76,
+        "col": 5,
+        "msg": "'localStream' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 77,
+        "col": 5,
+        "msg": "'screenStream' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 188,
+        "col": 38,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/ForgotPasswordPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 13,
+        "col": 10,
+        "msg": "'error' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 23,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/LoginPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 41,
+        "msg": "'ShieldCheck' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 54,
+        "msg": "'Check' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 38,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/OnboardingPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 12,
+        "col": 11,
+        "msg": "'setUserName' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/RegisterPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 57,
+        "msg": "'Check' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 59,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/ResetPasswordPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 42,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/auth/VerifyEmailPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 17,
+        "msg": "'Mail' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 23,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 60,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/AiInsightsPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'MessageSquare' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 12,
+        "col": 3,
+        "msg": "'Filter' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 13,
+        "col": 3,
+        "msg": "'ArrowRight' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 20,
+        "col": 3,
+        "msg": "'ExternalLink' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 32,
+        "col": 3,
+        "msg": "'StructuredAiSummary' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 49,
+        "col": 10,
+        "msg": "'isLoading' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/CalendarPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 5,
+        "col": 15,
+        "msg": "'CalendarIcon' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 12,
+        "col": 3,
+        "msg": "'ExternalLink' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 13,
+        "col": 3,
+        "msg": "'Shield' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 14,
+        "col": 3,
+        "msg": "'Sparkles' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 15,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 16,
+        "col": 3,
+        "msg": "'AlertCircle' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 24,
+        "col": 10,
+        "msg": "'MeetingRecord' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 30,
+        "col": 44,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 31,
+        "col": 58,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 114,
+        "col": 40,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/MyMeetingsPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 9,
+        "col": 3,
+        "msg": "'Plus' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 12,
+        "col": 3,
+        "msg": "'MoreVertical' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 21,
+        "col": 9,
+        "msg": "'navigate' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/OverviewPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 7,
+        "col": 3,
+        "msg": "'Plus' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'MonitorUp' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 18,
+        "col": 3,
+        "msg": "'AlertCircle' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 21,
+        "col": 3,
+        "msg": "'MoreVertical' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 28,
+        "col": 29,
+        "msg": "'ActionItemDto' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 34,
+        "col": 26,
+        "msg": "'error' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 123,
+        "col": 30,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 155,
+        "col": 77,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 386,
+        "col": 53,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/RecordingsPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'Clock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 10,
+        "col": 3,
+        "msg": "'Trash2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 11,
+        "col": 3,
+        "msg": "'X' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 21,
+        "col": 60,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 25,
+        "col": 31,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/ScheduleMeetingPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 4,
+        "col": 3,
+        "msg": "'CalendarPlus' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 5,
+        "col": 3,
+        "msg": "'Clock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'Globe2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'Settings' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 9,
+        "col": 3,
+        "msg": "'Shield' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 39,
+        "col": 23,
+        "msg": "'setDescription' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 57,
+        "col": 35,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/SettingsPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 3,
+        "msg": "'Settings' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 5,
+        "col": 3,
+        "msg": "'Sliders' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'Sparkles' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'CreditCard' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 15,
+        "col": 3,
+        "msg": "'Lock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 17,
+        "col": 3,
+        "msg": "'Key' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 19,
+        "col": 3,
+        "msg": "'Eye' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 25,
+        "col": 10,
+        "msg": "'Badge' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 35,
+        "col": 32,
+        "msg": "'organizationName' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 43,
+        "col": 17,
+        "msg": "'setEmail' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 63,
+        "col": 10,
+        "msg": "'weeklyDigest' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 63,
+        "col": 24,
+        "msg": "'setWeeklyDigest' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 73,
+        "col": 10,
+        "msg": "'highContrast' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 73,
+        "col": 24,
+        "msg": "'setHighContrast' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/TasksPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 4,
+        "col": 3,
+        "msg": "'CheckSquare' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'Filter' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 7,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'Clock' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 10,
+        "col": 3,
+        "msg": "'AlertCircle' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 11,
+        "col": 3,
+        "msg": "'MoreVertical' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 15,
+        "col": 3,
+        "msg": "'RefreshCw' is defined but never used."
+      },
+      {
+        "rule": "no-empty",
+        "line": 214,
+        "col": 19,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 451,
+        "col": 71,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 512,
+        "col": 68,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 534,
+        "col": 66,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/dashboard/WorkspacePage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 3,
+        "msg": "'Layers' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'Shield' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'MoreVertical' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 9,
+        "col": 3,
+        "msg": "'Mail' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 44,
+        "col": 10,
+        "msg": "'isLoading' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 256,
+        "col": 46,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 523,
+        "col": 64,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 561,
+        "col": 66,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/pages/meeting/MeetingRoomPage.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 17,
+        "col": 3,
+        "msg": "'CheckCircle2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 20,
+        "col": 3,
+        "msg": "'Loader2' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 27,
+        "col": 3,
+        "msg": "'ChevronDown' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 196,
+        "col": 10,
+        "msg": "'transcriptSearch' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 196,
+        "col": 28,
+        "msg": "'setTranscriptSearch' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 427,
+        "col": 55,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 429,
+        "col": 54,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 432,
+        "col": 38,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/routes/AppRoutes.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 14,
+        "col": 7,
+        "msg": "'VerifyEmailPage' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/services/aiService.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 69,
+        "col": 53,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 87,
+        "col": 54,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 88,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 94,
+        "col": 46,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 95,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/services/apiClient.ts",
+    "messages": [
+      {
+        "rule": "no-undef",
+        "line": 52,
+        "col": 12,
+        "msg": "'RequestInit' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 109,
+        "col": 16,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-undef",
+        "line": 129,
+        "col": 40,
+        "msg": "'RequestInit' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 131,
+        "col": 38,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-undef",
+        "line": 131,
+        "col": 53,
+        "msg": "'RequestInit' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 137,
+        "col": 39,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-undef",
+        "line": 137,
+        "col": 54,
+        "msg": "'RequestInit' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 143,
+        "col": 43,
+        "msg": "'RequestInit' is not defined."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/services/meetingService.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 30,
+        "col": 12,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-undef",
+        "line": 32,
+        "col": 15,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 36,
+        "col": 13,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 47,
+        "col": 60,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 49,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 77,
+        "col": 63,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 78,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 84,
+        "col": 67,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 85,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 91,
+        "col": 108,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 92,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 98,
+        "col": 44,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 99,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 108,
+        "col": 46,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 109,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 112,
+        "col": 45,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 113,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 118,
+        "col": 53,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 119,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 129,
+        "col": 54,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 130,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/services/workspaceService.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 82,
+        "col": 14,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 90,
+        "col": 14,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 94,
+        "col": 70,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 101,
+        "col": 14,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/stores/authStore.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 23,
+        "msg": "'AuthUser' is defined but never used."
+      },
+      {
+        "rule": "no-empty",
+        "line": 37,
+        "col": 11,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 52,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 65,
+        "col": 53,
+        "msg": "'get' is defined but never used. Allowed unused args must match /^_/u."
+      },
+      {
+        "rule": "no-empty",
+        "line": 85,
+        "col": 15,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 94,
+        "col": 15,
+        "msg": "Empty block statement."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/test/responsive.test.tsx",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 44,
+        "msg": "'vi' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/client/src/utils/constants.ts",
+    "messages": [
+      {
+        "rule": "no-undef",
+        "line": 1,
+        "col": 27,
+        "msg": "'RTCConfiguration' is not defined."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/config/db.ts",
+    "messages": [
+      {
+        "rule": "no-empty",
+        "line": 57,
+        "col": 15,
+        "msg": "Empty block statement."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/actionItem.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 6,
+        "col": 35,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 49,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/auth.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 52,
+        "col": 11,
+        "msg": "'maxAge' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/calendar.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 8,
+        "col": 35,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/message.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 6,
+        "col": 32,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/recording.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 80,
+        "col": 60,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/transcript.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 6,
+        "col": 35,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 57,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/controllers/workspace.controller.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 9,
+        "col": 34,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 32,
+        "col": 31,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 74,
+        "col": 34,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-empty",
+        "line": 186,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 215,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 245,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 268,
+        "col": 15,
+        "msg": "'workspaceId' is assigned a value but never used."
+      },
+      {
+        "rule": "no-empty",
+        "line": 278,
+        "col": 13,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 292,
+        "col": 15,
+        "msg": "'workspaceId' is assigned a value but never used."
+      },
+      {
+        "rule": "no-empty",
+        "line": 297,
+        "col": 13,
+        "msg": "Empty block statement."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/index.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 78,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/middleware/auth.middleware.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-namespace",
+        "line": 8,
+        "col": 3,
+        "msg": "ES2015 module syntax is preferred over namespaces."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/middleware/sanitize.middleware.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 3,
+        "col": 30,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/routes/organization.routes.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 24,
+        "msg": "'requireRole' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 3,
+        "col": 3,
+        "msg": "'DialogueSegment' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 4,
+        "col": 3,
+        "msg": "'StructuredSummary' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 5,
+        "col": 3,
+        "msg": "'ExtractedActionItem' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 3,
+        "msg": "'AssistantAnswer' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 7,
+        "col": 3,
+        "msg": "'MeetingInsights' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 3,
+        "msg": "'JobStatus' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 58,
+        "col": 47,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai/ai.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 63,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 100,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 179,
+        "col": 49,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 272,
+        "col": 18,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 273,
+        "col": 22,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai/ai.types.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 62,
+        "col": 12,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai/aiJobQueue.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 10,
+        "col": 29,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 36,
+        "col": 21,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai/contextualNlpProvider.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 17,
+        "col": 11,
+        "msg": "'allText' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/ai/openAiProvider.ts",
+    "messages": [
+      {
+        "rule": "no-undef",
+        "line": 40,
+        "col": 54,
+        "msg": "'RequestInit' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 40,
+        "col": 89,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 68,
+        "col": 21,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 258,
+        "col": 45,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 261,
+        "col": 36,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/auth.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 16,
+        "msg": "'IUserDocument' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 42,
+        "col": 45,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 53,
+        "col": 20,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 93,
+        "col": 45,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 94,
+        "col": 48,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 294,
+        "col": 19,
+        "msg": "'_' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 331,
+        "col": 88,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 346,
+        "col": 57,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 356,
+        "col": 17,
+        "msg": "'_' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/meeting.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 2,
+        "col": 19,
+        "msg": "'IMeetingDocument' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 49,
+        "col": 47,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 147,
+        "col": 73,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 187,
+        "col": 75,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 241,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 275,
+        "col": 126,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 276,
+        "col": 29,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-empty",
+        "line": 303,
+        "col": 15,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 333,
+        "col": 66,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 340,
+        "col": 74,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 343,
+        "col": 23,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 371,
+        "col": 15,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 382,
+        "col": 22,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 402,
+        "col": 27,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 465,
+        "col": 14,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-undef",
+        "line": 467,
+        "col": 17,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 469,
+        "col": 18,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 485,
+        "col": 24,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 507,
+        "col": 50,
+        "msg": "'userId' is defined but never used. Allowed unused args must match /^_/u."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 507,
+        "col": 76,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/notification.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 24,
+        "msg": "'INotificationDocument' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 24,
+        "col": 37,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 64,
+        "col": 83,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 72,
+        "col": 21,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 101,
+        "col": 78,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 114,
+        "col": 53,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "no-empty",
+        "line": 123,
+        "col": 15,
+        "msg": "Empty block statement."
+      },
+      {
+        "rule": "no-empty",
+        "line": 140,
+        "col": 15,
+        "msg": "Empty block statement."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/sfu.service.ts",
+    "messages": [
+      {
+        "rule": "no-undef",
+        "line": 9,
+        "col": 15,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 47,
+        "col": 23,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 54,
+        "col": 25,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 78,
+        "col": 34,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 79,
+        "col": 23,
+        "msg": "'RTCIceServer' is not defined."
+      },
+      {
+        "rule": "no-undef",
+        "line": 85,
+        "col": 25,
+        "msg": "'RTCIceServer' is not defined."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/services/storage.service.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 6,
+        "col": 21,
+        "msg": "'IRecordingDocument' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 47,
+        "col": 14,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/server/src/utils/token.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 32,
+        "col": 38,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 40,
+        "col": 46,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/inspect_browser.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 141,
+        "col": 16,
+        "msg": "'e' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 165,
+        "col": 14,
+        "msg": "'e' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 169,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase3_backend_auth.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 32,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 39,
+        "col": 7,
+        "msg": "'testRefreshToken' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 40,
+        "col": 7,
+        "msg": "'testUserId' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase4_webrtc_engine.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 33,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 310,
+        "col": 74,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase5_ai_intelligence.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 4,
+        "col": 10,
+        "msg": "'AiJobQueue' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 33,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 159,
+        "col": 49,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 170,
+        "col": 9,
+        "msg": "'generatedSummary' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 170,
+        "col": 27,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 221,
+        "col": 25,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 443,
+        "col": 25,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase6_collaboration.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 34,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 252,
+        "col": 40,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 307,
+        "col": 49,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 384,
+        "col": 37,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 398,
+        "col": 47,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase7_system_integration.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 1,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 33,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 40,
+        "col": 7,
+        "msg": "'hostRefreshToken' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 210,
+        "col": 40,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 222,
+        "col": 43,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 298,
+        "col": 40,
+        "msg": "'peerData' is defined but never used. Allowed unused args must match /^_/u."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 298,
+        "col": 50,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 319,
+        "col": 47,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 330,
+        "col": 41,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 350,
+        "col": 56,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 376,
+        "col": 56,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 710,
+        "col": 22,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase8_playwright.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 38,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 149,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase8_supertest_security.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 21,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 29,
+        "col": 7,
+        "msg": "'refreshTokenCookie' is assigned a value but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 256,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/phase9_deployment_verification.test.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 5,
+        "col": 10,
+        "msg": "'AiService' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "line": 8,
+        "col": 8,
+        "msg": "'http' is defined but never used."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 28,
+        "col": 19,
+        "msg": "Unexpected any. Specify a different type."
+      },
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 235,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/Admin/Downloads/IntellMeet-main/tests/test_chat_behavior.ts",
+    "messages": [
+      {
+        "rule": "@typescript-eslint/no-explicit-any",
+        "line": 57,
+        "col": 17,
+        "msg": "Unexpected any. Specify a different type."
+      }
+    ]
+  }
+]
